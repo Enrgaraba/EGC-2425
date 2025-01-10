@@ -20,10 +20,12 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
 
-    services:
-      strategy:
+    strategy:
       matrix:
         image: ['mysql:5.7', 'mysql:8']
+
+    services:
+      
 
       mysql:
         image: ${{ matrix.image }}
