@@ -3,7 +3,7 @@ FROM python:3.12-slim
 
 # Set this environment variable to suppress the "Running as root" warning from pip
 ENV PIP_ROOT_USER_ACTION=ignore
-
+ENV DEBUG= false
 # Install necessary packages
 RUN apt-get update \
     && apt-get install -y --no-install-recommends mariadb-client \
